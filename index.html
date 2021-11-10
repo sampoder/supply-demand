@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>replit</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+
+<body>
+	<div class="grid">
+		<div class="info-block">
+			<h1>Exploring the Supply and Demand Curve</h1>
+			<details>
+				<summary>A bit about this project...</summary>
+				<p>Green represents demand and blue represents supply. I built this as I studied for my economics test, some may call it procrasination... Anyhow, if you find an issue please let me know on GitHub at <a href="https://github.com/sampoder/supply-demand">sampoder/supply-demand</a>.</p>
+			</details>
+      <h2>Non-price Determinants of Demand</h2>
+      <h4>Substitutes</h4>
+      <input step="1" type="range" min="-5" max="5" value="0" class="slider" id="substitutes" oninput step="1"="changeDeterminantsofDemand(this.id, this.value)" onchange="changeDeterminantsofDemand(this.id, this.value)">
+      <div class="flex-input step="1"">
+        <p style="flex-grow: 1">Low Availability</p>
+        <p style="text-align: right">High Availability</p>
+      </div>
+      <h4>Complements</h4>
+			<input step="1" type="range" min="-5" max="5" value="0" class="slider" id="complements" oninput step="1"="changeDeterminantsofDemand(this.id, this.value)" onchange="changeDeterminantsofDemand(this.id, this.value)">
+      <div class="flex-input step="1"">
+        <p style="flex-grow: 1">Low Availability</p>
+        <p style="text-align: right">High Availability</p>
+      </div>
+      <h4>Population</h4>
+			<input step="1" type="range" min="-5" max="5" value="0" class="slider" id="population" oninput step="1"="changeDeterminantsofDemand(this.id, this.value)" onchange="changeDeterminantsofDemand(this.id, this.value)">
+      <div class="flex-input step="1"">
+        <p style="flex-grow: 1">Low Population</p>
+        <p style="text-align: right">High Population</p>
+      </div>
+      <h4>Consumer Sentiment</h4>
+			<input step="1" type="range" min="-5" max="5" value="0" class="slider" id="sentiment" oninput step="1"="changeDeterminantsofDemand(this.id, this.value)" onchange="changeDeterminantsofDemand(this.id, this.value)">
+      <div class="flex-input step="1"">
+        <p style="flex-grow: 1">Negative Sentiment</p>
+        <p style="text-align: right">Positive Sentiment</p>
+      </div>
+      <h4>Real Income (for normal goods)</h4>
+			<input step="1" type="range" min="-5" max="5" value="0" class="slider" id="normalIncome" oninput step="1"="changeDeterminantsofDemand(this.id, this.value)" onchange="changeDeterminantsofDemand(this.id, this.value)">
+      <div class="flex-input step="1"">
+        <p style="flex-grow: 1">Low Income</p>
+        <p style="text-align: right">High Income</p>
+      </div>
+      <h4>Real Income (for inferior goods)</h4>
+			<input step="1" type="range" min="-5" max="5" value="0" class="slider" id="inferiorIncome" oninput step="1"="changeDeterminantsofDemand(this.id, this.value)" onchange="changeDeterminantsofDemand(this.id, this.value)">
+      <div class="flex-input step="1"">
+        <p style="flex-grow: 1">Low Income</p>
+        <p style="text-align: right">High Income</p>
+      </div>
+      <h2>Non-price Determinants of Supply</h2>
+      <h4>Cost of Production</h4>
+			<input step="1" type="range" min="-5" max="5" value="0" class="slider" id="productionCost" oninput step="1"="changeDeterminantsofSupply(this.id, this.value)" onchange="changeDeterminantsofSupply(this.id, this.value)">
+      <div class="flex-input step="1"">
+        <p style="flex-grow: 1">Low Cost</p>
+        <p style="text-align: right">High Cost</p>
+      </div>
+      <h4>Subsidy or an Indirect Tax</h4>
+			<input step="1" type="range" min="-5" max="5" value="0" class="slider" id="subsidyTax" oninput step="1"="changeDeterminantsofSupply(this.id, this.value)" onchange="changeDeterminantsofSupply(this.id, this.value)">
+      <div class="flex-input step="1"">
+        <p style="flex-grow: 1">Highly Subsidised</p>
+        <p style="text-align: right">Highly Taxed</p>
+      </div>
+      <h2>Market Efficiency</h2>
+      <h4>Consumer Surplus</h4>
+      <h4>Producer Surplus</h4>
+      <h2>Elasticities</h2>
+      <h4>Price Elasticity of Demand</h4>
+      <h4>Price Elasticity of Supply</h4>
+      <h2>Determinants of of PED</h2>
+      <h4>Necessity</h4>
+      <input step="1" type="range" min="-5" max="5" value="0" class="slider" id="necessity" oninput step="1"="changeDeterminantsofPED(this.id, this.value)" onchange="changeDeterminantsofPED(this.id, this.value)">
+      <div class="flex-input step="1"">
+        <p style="flex-grow: 1">Not Needed</p>
+        <p style="text-align: right">Needed</p>
+      </div>
+      <h4>Substitutes</h4>
+      <input step="1" type="range" min="-5" max="5" value="0" class="slider" id="substitutes" oninput step="1"="changeDeterminantsofPED(this.id, this.value)" onchange="changeDeterminantsofPED(this.id, this.value)">
+      <div class="flex-input step="1"">
+        <p style="flex-grow: 1">Low Availability</p>
+        <p style="text-align: right">High Availability</p>
+      </div>
+      <h4>% of Standard Income</h4>
+      <input step="1" type="range" min="-5" max="5" value="0" class="slider" id="incomePercent" oninput step="1"="changeDeterminantsofPED(this.id, this.value)" onchange="changeDeterminantsofPED(this.id, this.value)">
+      <div class="flex-input step="1"">
+        <p style="flex-grow: 1">Low %</p>
+        <p style="text-align: right">High %</p>
+      </div>
+      <h2>Determinants of PES</h2>
+      <h4>Ability to Store Stock</h4>
+      <input step="1" type="range" min="-5" max="5" value="0" class="slider" id="stockable" oninput step="1"="changeDeterminantsofPES(this.id, this.value)" onchange="changeDeterminantsofPES(this.id, this.value)">
+      <div class="flex-input step="1"">
+        <p style="flex-grow: 1">Difficult to Store</p>
+        <p style="text-align: right">Easy to Store</p>
+      </div>
+      <h4>Production Mobility</h4>
+      <input step="1" type="range" min="-5" max="5" value="0" class="slider" id="mobility" oninput step="1"="changeDeterminantsofPES(this.id, this.value)" onchange="changeDeterminantsofPES(this.id, this.value)">
+      <div class="flex-input step="1"">
+        <p style="flex-grow: 1">Inmobile</p>
+        <p style="text-align: right">Highly Mobile</p>
+      </div>
+      <h4>Time to Produce</h4>
+      <input step="1" type="range" min="-5" max="5" value="0" class="slider" id="time" oninput step="1"="changeDeterminantsofPES(this.id, this.value)" onchange="changeDeterminantsofPES(this.id, this.value)">
+      <div class="flex-input step="1"">
+        <p style="flex-grow: 1">Short Time</p>
+        <p style="text-align: right">Long Time</p>
+      </div>
+      <br />
+      <br />
+      <br />
+    </div>
+    <div id="calculator" style="width: 50vw; height: 100vh;"></div>
+    </div>
+    <script src="https://www.desmos.com/api/v1.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
